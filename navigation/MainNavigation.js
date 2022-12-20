@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Splash from "../screens/Splash";
-import News from "../screens/News";
+import MainTabNav from "./MainTabNav";
 const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
@@ -13,7 +13,11 @@ const MainNavigation = () => {
           component={Splash}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="news" component={News} />
+        <Stack.Screen
+          name="MainTab"
+          options={{ headerShown: false }}
+          component={MainTabNav}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

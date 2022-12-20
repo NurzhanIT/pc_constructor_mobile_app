@@ -1,10 +1,11 @@
 import { useEffect } from "react";
+import { StatusBar } from "expo-status-bar";
 import styled from "styled-components/native";
 import { View, Text, StyleSheet } from "react-native";
 const Splash = ({ navigation }) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace("news");
+      navigation.replace("MainTab");
     }, 3000);
   }, []);
   return (
